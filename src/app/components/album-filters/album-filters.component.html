@@ -1,0 +1,15 @@
+<div class="album-filters">
+  <div class="album-filters__item">
+    <label for="filter-sort" class="album-filters__label">Sort Direction</label>
+    <select id="filter-sort"
+            (change)="onSortChange($event)"
+            class="album-filters__control">
+      <option value="asc">ASCENDING</option>
+      <option value="desc">DESCENDING</option>
+    </select>
+  </div>
+  <div class="album-filters__item">
+    <label class="album-filters__label">Filter by Title</label>
+    <input class="album-filters__control" #filterInput>
+  </div>
+</div>

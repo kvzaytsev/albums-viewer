@@ -1,0 +1,28 @@
+<div class="album-details__wrapper"
+     *ngIf="show">
+  <div class="album-details">
+    <div class="album-details__cover">
+      <picture>
+        <source media="(min-width:960px)" srcset="{{album.getBigCoverUrls()}}">
+        <img src="{{album.getSmallCoverUrl()}}" srcset="{{album.getSmallCoverUrl2x()}}">
+      </picture>
+    </div>
+    <div class="album-details__info">
+
+      <div class="album-details__header">
+        <div class="album-details__name">
+          {{album.collectionCensoredName}}
+        </div>
+        <div class="album-details__artist">
+          {{album.artistName}}
+        </div>
+      </div>
+
+      <ul class="album-details__track-list">
+        <li class="album-details__track"
+            *ngFor="let song of album.songList">{{song}}</li>
+      </ul>
+
+    </div>
+  </div>
+</div>

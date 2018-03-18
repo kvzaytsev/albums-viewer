@@ -1,0 +1,14 @@
+<div class="album-list-wrapper">
+  <app-album-filters
+    (sortChange)="onSortChange($event)"
+    (filterChange)="onFilterChange($event)"></app-album-filters>
+
+  <section class="album-list">
+    <app-album  *ngFor="let album of albums | filter: mask | sort: direction"
+                [album]="album"
+                (viewAlbum)="onViewAlbum($event)">
+    </app-album>
+  </section>
+</div>
+
+

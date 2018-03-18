@@ -1,0 +1,65 @@
+@import '~sass/mixins';
+@import '~sass/variables';
+
+.album-details__wrapper {
+  @include center-container;
+}
+
+.album-details {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.album-details__track-list {
+  @include reset-list;
+
+  width: 100%;
+}
+
+.album-details__cover {
+  display: none;
+
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 300px;
+    width: 300px;
+    position: static;
+  }
+}
+
+.album-details__info {
+  padding: 0 10px;
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.album-details__header {
+  min-height: 100px;
+}
+
+.album-details__name {
+  margin-bottom: 10px;
+
+  font-size: 24px;
+}
+
+.album-details__artist {
+  color: #7e7e7e;
+  font-size: 18px;
+}
+
+.album-details__track {
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  font-size: 14px;
+}

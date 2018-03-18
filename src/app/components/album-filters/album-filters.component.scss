@@ -1,0 +1,30 @@
+@import '~sass/variables';
+@import '~sass/mixins';
+
+:host {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.album-filters {
+  @include card;
+
+  margin-bottom: 20px;
+}
+
+.album-filters__item {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+.album-filters__label {
+  min-width: 150px;
+}
+
+.album-filters__control {
+  flex: 1;
+  font-size: 16px;
+  padding: 5px;
+}

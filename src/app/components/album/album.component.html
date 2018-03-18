@@ -1,0 +1,15 @@
+
+  <div class="album__info">
+    <div class="album__name">
+      {{album.collectionCensoredName}}
+    </div>
+    <div class="album__artist">
+      {{album.artistName}}
+    </div>
+  </div>
+  <div class="album__cover">
+    <picture>
+      <source media="(min-width:660px)" srcset="{{album.getBigCoverUrls()}}">
+      <img src="{{album.getSmallCoverUrl()}}" srcset="{{album.getSmallCoverUrl2x()}}">
+    </picture>
+  </div>

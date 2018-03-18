@@ -1,0 +1,50 @@
+@import "~sass/variables";
+@import "~sass/mixins";
+
+:host {
+  display: flex;
+  margin-bottom: 20px;
+  cursor: pointer;
+
+  @include card;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+  }
+}
+
+:host:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.album__info {
+  flex: 1;
+  order: 2;
+
+  @media (min-width: $tablet-width) {
+    order: 1;
+  }
+}
+
+.album__name {
+  padding: 10px 15px;
+}
+
+.album__artist {
+  padding: 10px 15px;
+  color: #7e7e7e;
+}
+
+.album__cover {
+  order: 1;
+  height: 100px;
+  width: 100px;
+
+  @media (min-width: $tablet-width) {
+    order: 2;
+    height: 300px;
+    width: 300px;
+  }
+}
